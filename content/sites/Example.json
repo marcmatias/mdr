@@ -1,0 +1,19 @@
+{
+    "links": [
+        [
+            "Site",
+            "http://x.com/"
+        ],
+        [
+            "Github",
+            "https://github.com"
+        ],
+        [
+            "Telegram",
+            "https://t.me/grupyabc"
+        ]
+    ],
+    "nome": "Example",
+    "imagem": "images/comunidades-locais/grupy-abc.png",
+    "sigla": "EX"
+}
