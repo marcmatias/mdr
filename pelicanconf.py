@@ -7,7 +7,7 @@ import json
 
 AUTHOR = 'Marcel Marques'
 SITENAME = 'MDR'
-SITEURL = ''
+SITEURL = 'https://marcmatias.github.io/mdr/'
 
 PATH = 'content'
 
