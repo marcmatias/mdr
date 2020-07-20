@@ -10,367 +10,220 @@
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/tailwind.css">
 </head>
 
-<body class="flex flex-col min-h-screen">
-
-    <header>
-      <nav id="nav" class="bg-blue-700 shadow" role="navigation">
-        <div class="container mx-auto p-4 flex flex-wrap items-center md:flex-no-wrap">
-          <div class="mr-4 md:mr-8">
-            <a href="#" rel="home">
-              <span class="text-xl text-white">Pythonic Café</span>
+<body>
+    <header class="text-gray-700 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+                    viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="ml-3 text-xl">tailblocks</span>
             </a>
-          </div>
-          <div class="ml-auto md:hidden">
-            <button onclick="menuToggle()" class="flex items-center px-3 py-2 border rounded" type="button">
-              <svg class="h-3 w-3 text-white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <title>Menu</title>
-                <path fill="currentColor" d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-              </svg>
-            </button>
-          </div>
-          <div id="menu"
-            class="w-full h-0 transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center">
-            <ul id="ulMenu"
-              class="flex flex-col duration-300 ease-out sm:transition-none mt-5 mx-4 md:flex-row md:items-center md:mx-0 md:ml-auto md:mt-0 md:pt-0 md:border-0">
-              <li>
-                <a class="md:p-2 lg:px-4 btn-menu text-white" href="#" title="Home">Home</a>
-              </li>
-              <li>
-                <a class="md:p-2 lg:px-4 btn-menu" href="#" title="Vídeos">Vídeos</a>
-              </li>
-              <li>
-                <a class="md:p-2 lg:px-4 btn-menu" href="#" title="Projetos">Projetos</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-  
-    <main class="flex-grow">
-      <section class="bg-gray-100 text-gray-700 body-font ">
-        <div class="grid grid-cols-2 max-w-screen-xl mx-auto items-center">
-          <div class="col-span-2 md:col-span-1 mt-10 md:py-24 md:hidden">
-            <div class="flex justify-center">
-              <img class="max-w-xs p-5" alt="Pythonic Café Logo" src="img/pythonic-cafe.png">
-            </div>
-          </div>
-          <div class="col-span-2 md:col-span-1 px-5 py-24 md:py-48 md:text-left lg:mb-0 items-center text-centerj">
-            <h1 class="sm:text-4xl text-3xl mb-4 font-medium text-gray-900 md:text-left">Tudo sobre o mundo Python!
-              <!-- <br class="hidden lg:inline-block">Python é bom pacas! -->
-            </h1>
-            <p class="mb-8 leading-relaxed text-gray-800 text-left">Lorem ipsum dolor sit amet consectetur adipisicing
-              elit.
-              Deserunt quidem
-              impedit quisquam accusamus illo necessitatibus deleniti? Commodi perferendis ea eos veritatis id, impedit
-              repudiandae vel accusamus. Nemo id at voluptatum.</p>
-            <div>
-              <a href="#section1" class="btn btn-primary">Conhecer</a>
-            </div>
-          </div>
-          <div class="col-span-2 md:col-span-1 md:py-24 hidden md:block">
-            <div class="flex justify-center">
-              <img class="max-w-sm p-5" alt="Pythonic Café Logo" src="img/pythonic-cafe.png">
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section id="section1" class="text-gray-700 body-font border-t border-gray-200">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-col text-center w-full mb-20">
-            <h2 class="text-xs text-blue-600 tracking-widest font-medium title-font mb-1">CONHEÇA NOSSOS TRABALHOS</h2>
-            <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">Projetos desenvolvidos</h1>
-          </div>
-          <div class="flex flex-wrap -m-4">
-            <div class="p-4 md:w-1/3 min-w-full md:min-w-0">
-              <div class="flex rounded-lg h-full bg-white p-8 flex-col shadow-xl">
-                <div class="flex items-center mb-3">
-                  <div
-                    class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-blue-600 text-white flex-shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="feather feather-bar-chart-2">
-                      <line x1="18" y1="20" x2="18" y2="10" />
-                      <line x1="12" y1="20" x2="12" y2="4" />
-                      <line x1="6" y1="20" x2="6" y2="14" /></svg>
-                  </div>
-                  <h2 class="text-gray-900 text-lg title-font font-medium">Brasil.io</h2>
-                </div>
-                <div class="flex-grow">
-                  <p class="leading-relaxed text-base h-32 overflow-y-auto">Repositório de dados públicos disponibilizados
-                    em formato
-                    acessível.</p>
-                  <a href="https://brasil.io/"
-                    class="mt-3 text-blue-600 inline-flex items-center hover:scale-110 hover:font-medium transform transition-transform duration-300">Ir
-                    para
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                      <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="p-4 md:w-1/3 min-w-full md:min-w-0">
-              <div class="flex rounded-lg h-full bg-white p-8 flex-col shadow-xl">
-                <div class="flex items-center mb-3">
-                  <div
-                    class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-blue-600 text-white flex-shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="feather feather-align-left">
-                      <line x1="17" y1="10" x2="3" y2="10" />
-                      <line x1="21" y1="6" x2="3" y2="6" />
-                      <line x1="21" y1="14" x2="3" y2="14" />
-                      <line x1="17" y1="18" x2="3" y2="18" /></svg>
-                  </div>
-                  <h2 class="text-gray-900 text-lg title-font font-medium">Rows</h2>
-                </div>
-                <div class="flex-grow">
-                  <p class="leading-relaxed text-base h-32 overflow-y-auto">No matter in which format your tabular data
-                    is: rows will import
-                    it, automatically detect types and give you high-level Python objects so you can start working with
-                    the data instead of trying to parse it.</p>
-                  <a href="https://github.com/turicas/rows/"
-                    class="mt-3 text-blue-600 inline-flex items-center hover:scale-110 hover:font-medium transform transition-transform duration-300">Ir
-                    para
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                      <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="p-4 md:w-1/3 min-w-full md:min-w-0">
-              <div class="flex rounded-lg h-full bg-white p-8 flex-col shadow-xl">
-                <div class="flex items-center mb-3">
-                  <div
-                    class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-blue-600 text-white flex-shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="feather feather-film">
-                      <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18" />
-                      <line x1="7" y1="2" x2="7" y2="22" />
-                      <line x1="17" y1="2" x2="17" y2="22" />
-                      <line x1="2" y1="12" x2="22" y2="12" />
-                      <line x1="2" y1="7" x2="7" y2="7" />
-                      <line x1="2" y1="17" x2="7" y2="17" />
-                      <line x1="17" y1="17" x2="22" y2="17" />
-                      <line x1="17" y1="7" x2="22" y2="7" /></svg>
-                  </div>
-                  <h2 class="text-gray-900 text-lg title-font font-medium">Vídeos Pythonic Café</h2>
-                </div>
-                <div class="flex-grow">
-                  <p class="leading-relaxed text-base h-32 overflow-y-auto">Everything about the Python world!</p>
-                  <a href="https://pythonic.cafe/videos"
-                    class="mt-3 text-blue-600 inline-flex items-center hover:scale-110 hover:font-medium transform transition-transform duration-300">Ir
-                    para
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                      <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-  
-      <section class="text-gray-700 body-font border-t border-gray-200">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-wrap w-full mb-20">
-            <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-              <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Videos
-              </h1>
-              <div class="h-1 w-20 bg-blue-600 rounded"></div>
-            </div>
-            <p class="lg:w-1/2 w-full leading-relaxed text-base">Esses são alguns dos vídeos produzidos em nosso projeto.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut vel repudiandae voluptates tempore iusto
-              architecto enim similique quasi aut, debitis sed repellendus, commodi natus animi ipsam minus temporibus
-              libero laborum.</p>
-          </div>
-          <div class="flex flex-wrap -m-4">
-            <div class="xl:w-1/3 md:w-1/2 p-4">
-              <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-                <iframe class="h-48 rounded w-full object-cover object-center mb-6" width="560" height="315"
-                  src="https://www.youtube.com/embed/4QGxQ6OM_Qo" frameborder="0" allowfullscreen></iframe>
-                <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">2016-10-07</h3>
-                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">O Zen do Python</h2>
-                <p class="leading-relaxed text-base">Você sabe qual a filosofia por trás da linguagem Python? Entenda o
-                  Zen do Python que várias coisas começarão a fazer sentido e você se tornará um programador Python
-                  melhor. :-)</p>
-              </div>
-            </div>
-            <div class="xl:w-1/3 md:w-1/2 p-4 ">
-              <div class="bg-gray-100 p-6 rounded-lg shadow-lg ">
-                <iframe class="h-48 rounded w-full object-cover object-center mb-6" width="560" height="315"
-                  src="https://www.youtube.com/embed/Q3Kgd1IirgM" frameborder="0" allowfullscreen></iframe>
-                <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">2016-10-07</h3>
-                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">PythonBrasil:<br> <span
-                    class="text-sm">Palestra Relâmpago & Espaço
-                    Aberto</span></h2>
-                <p class="leading-relaxed text-base">Vídeo explicando sobre as palestras relâmpago (lightning talks) e
-                  espaços abertos (open spaces) da Conferência Python Brasil.</p>
-              </div>
-            </div>
-            <div class="xl:w-1/3 md:w-1/2 p-4 ">
-              <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-                <iframe class="h-48 rounded w-full object-cover object-center mb-6" width="560" height="315"
-                  src="https://www.youtube.com/embed/8QNjwSNd4s0" frameborder="0" allowfullscreen></iframe>
-                <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">2016-09-23</h3>
-                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Sprints da PythonBrasil[12]</h2>
-                <p class="leading-relaxed text-base">Vídeo de estreia do canal, convidando a galera pra desenvolver
-                  software livre junto, durante as sprints da PythonBrasil[12], que acontecerá de 13 a 18 de outubro de
-                  2016 em Florianópolis.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-700 body-font border-t border-gray-200">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-col text-center w-full mb-20">
-            <h2 class="text-xs text-blue-600 tracking-widest font-medium title-font mb-1">CONHECIMENTO E APRENDIZADO</h2>
-            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Cursos</h1>
-            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Lorem ipsum dolor sit, amet consectetur adipisicing
-              elit. Nostrum molestiae officiis, laborum eum molestias adipisci tenetur ex, necessitatibus autem hic
-              voluptate eveniet facilis. Suscipit, accusantium nisi nulla veritatis obcaecati exercitationem?.</p>
-          </div>
-          <div class="flex flex-wrap">
-            <div class="xl:w-1/3 lg:w-1/2 md:w-full px-8 py-6 border-b-2 lg:border-l-2 lg:border-b-0 border-gray-200">
-              <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Introdução ao Jornalismo de Dados
-              </h2>
-              <p class="leading-relaxed text-base mb-4">Curso gratuito em formato MOOC (massive open online course)
-                organizado pelo Knight Center de 5 de agosto a 8 de setembro de 2019, com patrocínio da Google News
-                Initiative.</p>
-              <a href="https://github.com/turicas/braindump/blob/loading/mooc-ddj.md"
-                class="text-blue-600 inline-flex items-center hover:scale-110 hover:font-medium transform transition-transform duration-300">Ir
-                para
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
-            </div>
-            <div class="xl:w-1/3 lg:w-1/2 md:w-full px-8 py-6 border-b-2 lg:border-l-2 lg:border-b-0 border-gray-200">
-              <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Introdução a programação com Python
-                <strong class="font-medium bg-yellow-200 rounded-full">(para jornalistas)</strong></h2>
-              <p class="leading-relaxed text-base mb-4">No final de 2017 o Knight Center organizou um curso gratuito de
-                introdução a programação em Python para jornalistas. Durante o curso existia um fórum [...]</p>
-              <a href="https://github.com/turicas/braindump/blob/loading/curso-python.md"
-                class="text-blue-600 inline-flex items-center hover:scale-110 hover:font-medium transform transition-transform duration-300">Ir
-                para
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
-            </div>
-            <div class="xl:w-1/3 lg:w-1/2 md:w-full px-8 py-6 border-b-2 lg:border-l-2 lg:border-b-0 border-gray-200">
-              <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Curso de Arduino (descontinuado)
-              </h2>
-              <p class="leading-relaxed text-base mb-4">O Curso de Arduino contabiliza 16 horas (em geral) de atividades
-                práticas, remetendo à teoria quando necessário (opção de cargas horárias diferentes sob demanda).</p>
-              <a href="https://cursodearduino.com.br/"
-                class="text-blue-600 inline-flex items-center hover:scale-110 hover:font-medium transform transition-transform duration-300">Ir
-                para
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <!-- <button class="flex mx-auto mt-16 btn btn-primary">Ver mais</button> -->
-        </div>
-      </section>
-  
-      <section class="text-gray-700 body-font border-t border-gray-200 bg-gray-700">
-        <div class="container px-5 py-24 mx-auto flex flex-col items-center">
-          <h1 class="font-bold text-2xl text-white">Contato</h1>
-          <a href="mailto:contato@pythonic.cafe" class="btn bg-white text-gray-700 mt-3 rounded-full hover:bg-gray-500
-             hover:text-gray-100 hover:scale-125 transform transition duration-500">contato@pythonic.cafe</a>
-        </div>
-      </section>
-  
-    </main>
-  
-    <footer class="text-gray-700 body-font bg-gray-400">
-      <div class="container px-5 py-12 mx-auto">
-        <div class="flex flex-wrap md:text-left text-center -mb-10 -mx-4">
-          <div class="lg:w-1/6 md:w-1/2 w-full px-4">
-            <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-            <nav class="list-none mb-10">
-              <li>
-                <a class="text-gray-700 hover:text-gray-800">First Link</a>
-              </li>
-              <li>
-                <a class="text-gray-700 hover:text-gray-800">Second Link</a>
-              </li>
-              <li>
-                <a class="text-gray-700 hover:text-gray-800">Third Link</a>
-              </li>
-              <li>
-                <a class="text-gray-700 hover:text-gray-800">Fourth Link</a>
-              </li>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 hover:text-gray-900">First Link</a>
+                <a class="mr-5 hover:text-gray-900">Second Link</a>
+                <a class="mr-5 hover:text-gray-900">Third Link</a>
+                <a class="mr-5 hover:text-gray-900">Fourth Link</a>
             </nav>
-          </div>
+            <button
+                class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">Button
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </button>
         </div>
-      </div>
-      <div>
-        <div class="container px-5 py-4 flex flex-wrap mx-auto items-center">
-          <span class="inline-flex mx-auto lg:mt-0 mt-6 w-full justify-center md:justify-start md:w-auto">
-            <a class="text-gray-600">
-              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
-                viewBox="0 0 24 24">
-                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-              </svg>
-            </a>
-            <a class="ml-3 text-gray-600">
-              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
-                viewBox="0 0 24 24">
-                <path
-                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
-                </path>
-              </svg>
-            </a>
-            <a class="ml-3 text-gray-600">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                class="w-5 h-5" viewBox="0 0 24 24">
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-              </svg>
-            </a>
-            <a class="ml-3 text-gray-600">
-              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
-                <path stroke="none"
-                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-                <circle cx="4" cy="4" r="2" stroke="none"></circle>
-              </svg>
-            </a>
-            <a class="ml-3 text-gray-600">
-              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
-                <path troke="none"
-                  d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
-              </svg>
-            </a>
-          </span>
+    </header>
+
+    <main>
+        <section class="text-gray-700 body-font">
+            <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+                <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+                    <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
+                </div>
+                <div
+                    class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+                    <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Before they sold out
+                        <br class="hidden lg:inline-block">readymade gluten
+                    </h1>
+                    <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air
+                        plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot
+                        chicken
+                        authentic tumeric truffaut hexagon try-hard chambray.</p>
+                    <div class="flex justify-center">
+                        <button
+                            class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+                        <button
+                            class="ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg">Button</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-gray-700 body-font border-t border-gray-200">
+            <div class="container px-5 py-24 mx-auto">
+                <div class="flex flex-wrap w-full mb-20">
+                    <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+                        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Videos
+                        </h1>
+                        <div class="h-1 w-20 bg-blue-600 rounded"></div>
+                    </div>
+                    <p class="lg:w-1/2 w-full leading-relaxed text-base">Esses são alguns dos vídeos produzidos em nosso
+                        projeto.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut vel repudiandae voluptates tempore
+                        iusto
+                        architecto enim similique quasi aut, debitis sed repellendus, commodi natus animi ipsam minus
+                        temporibus
+                        libero laborum.</p>
+                </div>
+                <div class="flex flex-wrap -m-4">
+                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                        <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                            <iframe class="h-48 rounded w-full object-cover object-center mb-6" width="560" height="315"
+                                src="https://www.youtube.com/watch?v=AEZ0-A8bEVk" frameborder="0"
+                                allowfullscreen></iframe>
+                            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">2016-10-07</h3>
+                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Test</h2>
+                            <p class="leading-relaxed text-base">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, dolore sapiente quasi
+                                corporis recusandae dicta provident cum itaque temporibus omnis non! Sapiente cum
+                                recusandae ut iusto, aut suscipit eius similique.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-gray-700 body-font">
+        <div
+            class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-no-wrap flex-wrap flex-col">
+            <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
+                <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2"
+                        class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                    <span class="ml-3 text-xl">tailblocks</span>
+                </a>
+                <p class="mt-2 text-sm text-gray-500">Air plant banjo lyft occupy retro adaptogen indego</p>
+            </div>
+            <div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                        </li>
+                    </nav>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="bg-gray-500">
-        <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-          <p class="text-gray-900 text-sm text-center sm:text-left font- font-semibold">Python.Café</p>
+        <div class="bg-gray-200">
+            <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+                <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 tailblocks —
+                    <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-600 ml-1"
+                        target="_blank">@knyttneve</a>
+                </p>
+                <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+                    <a class="text-gray-500">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-500">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path
+                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-500">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-500">
+                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path stroke="none"
+                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                            </path>
+                            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                        </svg>
+                    </a>
+                </span>
+            </div>
         </div>
-      </div>
     </footer>
-    <script src="app.js"></script>
-  </body>
+</body>
 
 </html>
