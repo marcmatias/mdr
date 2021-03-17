@@ -1,9 +1,16 @@
 import React from "react"
+import Heaader from "./header"
+import Footer from "./footer"
 
 const Layout = ({ children }) => {
+
     return (
-        <div style={{ margin: `3rem auto`, maxWidth: 650, padding: `0 1rem` }}>
-            {children}
+        <div className="flex flex-col min-h-screen">
+            <Heaader />
+            <main className="flex-grow">
+                {children}
+            </main>
+            <Footer />
         </div>
     )
 }
