@@ -1,4 +1,15 @@
 module.exports = {
+  siteMetadata: {
+    title: `MÚSICA É DA RUA`,
+    descriptionTitle: `Projeto Música é da Rua`,
+    descriptionText: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+     Porro beatae error laborum ab amet sunt recusandae? Reiciendis natus perspiciatis optio.`,
+
+    papoTitle: `Papo de Rua`,
+    papoDescription: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Porro beatae error laborum ab amet sunt recusandae? Reiciendis natus perspiciatis optio.`,
+
+  },
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
@@ -12,5 +23,14 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: "./src/posts/",
+      },
+      __key: "posts",
+    },
+    `gatsby-transformer-remark`,
   ],
 };
