@@ -8,7 +8,7 @@ module.exports = {
     papoTitle: `Papo de Rua`,
     papoDescription: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
     Porro beatae error laborum ab amet sunt recusandae? Reiciendis natus perspiciatis optio.`,
-
+    siteUrl: "https://priceless-leakey-c06026.netlify.app"
   },
   plugins: [
     "gatsby-plugin-react-helmet",
